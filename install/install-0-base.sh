@@ -38,3 +38,5 @@ java -version
 # COPY folders
 cp -R /vagrant/data /home/vagrant/data
 cp -R /vagrant/notebooks /home/vagrant/notebooks
+
+chmod -R 777 /home/vagrant/notebooks
