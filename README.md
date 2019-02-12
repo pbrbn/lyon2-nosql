@@ -2,7 +2,7 @@
 
 Vagrantfile and Jupyter notebook containing exercises for interacting with NoSQL stores.
 
-This VM contains `redis`, `mongo`, `Cassandra`, `Neo4j` and uses `Jupyter notebook` for interacting with the databases in Python or shell.
+This VM contains `redis`, `mongo`, `Cassandra`, `OrientDB`, `ElasticSearch` and uses `Jupyter notebook` for interacting with the databases in Python or shell.
 
 ## Prerequisites
 
@@ -51,12 +51,12 @@ Start Cassandra : `sudo service cassandra start`
 
 Stop Cassandra : `sudo service cassandra stop`
 
-#### Neo4J
+#### OrientDB
 
-Start Neo4J : `sudo service neo4j start`
+Start Neo4J : `sudo service orientdb start`
 
-Stop Neo4J : `sudo service neo4j stop`
+Stop Neo4J : `sudo service orientdb stop`
 
 ## Contributions
 
-A huge thanks to ...
+A huge thanks to Damien SIMONIN FEUGAS for a huge part of those NoSQL tutorials which were translated into Jupyter notebooks !
