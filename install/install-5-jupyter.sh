@@ -8,4 +8,4 @@ export PATH=/usr/miniconda/bin:$PATH
 
 conda create -n nosql python=3.6 jupyter jupyterlab
 source activate nosql
-pip install redis pymongo cassandra-driver neo4j
+pip install redis pymongo cassandra-driver pyorient elasticsearch-dsl
