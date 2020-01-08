@@ -3,9 +3,8 @@
 # vi: set ft=ruby :
 
 # Box / OS
-# VAGRANT_BOX = 'ubuntu/trusty64'
-VAGRANT_BOX = 'debian/jessie64'
-VAGRANT_BOX_VERSION = '8.11.0'
+VAGRANT_BOX = 'debian/stretch64'
+VAGRANT_BOX_VERSION = '9.9.1'
 
 # Box parameters
 VM_NAME = 'nosql'
