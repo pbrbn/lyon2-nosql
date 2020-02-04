@@ -20,7 +20,7 @@ for SCRIPT in ${SCRIPTS}; do
   SCRIPT_NAME=$(basename ${SCRIPT})
   echo "Running ... ${SCRIPT_NAME}"
   
-  sudo "${SCRIPT}"
+  sudo sh "${SCRIPT}"
   
   echo "Finished ... ${SCRIPT_NAME}"
   echo "--------------------------------------------"

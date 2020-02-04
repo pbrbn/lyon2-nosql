@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+
 apt-get install -y apt-transport-https
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+add-apt-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
 apt-get update 
 
-apt-get install -y elasticsearch
+apt-get install -y --allow-unauthenticated elasticsearch

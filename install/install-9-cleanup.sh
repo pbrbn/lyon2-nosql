@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 echo "Cleaning up ..."
+apt-get -y autoclean
 apt-get clean
-rm -rf /var/lib/apt/lists/*
+apt-get -y autoremove
 
-rm /home/vagrant/Miniconda3-latest-Linux-x86_64.sh
-rm /home/vagrant/orientdb-community-2.2.36.zip
+dd if=/dev/zero of=/EMPTY bs=1M > /dev/null 2>&1
+rm -f /EMPTY
+
+rm -rf /var/lib/apt/lists/*

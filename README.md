@@ -24,8 +24,7 @@ To destroy : `vagrant destroy`
 Launch Jupyter inside the generated VM :
 
 ```
-export PATH=/usr/miniconda/bin:$PATH
-source activate nosql
+conda activate nosql
 jupyter lab --ip='0.0.0.0' --port=8888 --NotebookApp.token=''
 ```
 
@@ -53,9 +52,7 @@ Stop Cassandra : `sudo service cassandra stop`
 
 #### OrientDB
 
-Start Neo4J : `sudo service orientdb start`
-
-Stop Neo4J : `sudo service orientdb stop`
+Start OrientDB : `sudo /opt/orientdb/bin/server.sh`
 
 ## Contributions
 
