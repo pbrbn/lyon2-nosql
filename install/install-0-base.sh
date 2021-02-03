@@ -12,19 +12,6 @@ EOF
 
 . /home/vagrant/.bash_aliases
 
-echo
-echo
-echo "Installing Java"
-
-apt-get install -y openjdk-8-*
-
-java -version
-
-cat >> /etc/environment <<EOL
-JAVA_HOME= /usr/lib/jvm/java-8-openjdk-amd64
-JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-EOL
-
 # COPY folders
 cp -R /vagrant/data /home/vagrant/data
 cp -R /vagrant/notebooks /home/vagrant/notebooks
