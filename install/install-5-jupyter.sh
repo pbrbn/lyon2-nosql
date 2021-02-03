@@ -7,6 +7,6 @@ export PATH=/usr/miniconda/bin:$PATH
 
 conda create -n nosql python=3.6 jupyter jupyterlab
 conda activate nosql
-pip install redis pymongo cassandra-driver pyorient elasticsearch-dsl
+pip install redis pymongo pyorient
 
 rm /home/vagrant/Miniconda3-latest-Linux-x86_64.sh
