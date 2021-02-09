@@ -11,6 +11,8 @@ This VM contains `redis`, `mongo`, `Cassandra`, `OrientDB`, `ElasticSearch` and 
 
 ## Run
 
+### With Vagrant
+
 To launch : `vagrant up`
 
 To connect into the machine : `vagrant ssh`
@@ -29,6 +31,22 @@ jupyter lab --ip='0.0.0.0' --port=8888 --NotebookApp.token=''
 ```
 
 then hit `http://localhost:8888/lab` in a browser to access `Jupyterlab`.
+
+### With conda
+
+```
+conda create -n nosql python=3.7
+conda activate nosql
+conda install -c anaconda redis mongodb jupyter jupyterlab
+
+redis-server # maybe redis-server --port 7777
+# OR
+mongod --dbpath /tmp/mongodb  # don't forget to create folder in advance, in C:/tmp/mongodb on Windows
+
+# in another shell
+jupyter lab
+```
+
 
 ## NoSQL stores debug
 
