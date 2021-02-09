@@ -37,7 +37,7 @@ then hit `http://localhost:8888/lab` in a browser to access `Jupyterlab`.
 ```
 conda create -n nosql python=3.7
 conda activate nosql
-conda install -c anaconda redis mongodb
+conda install -c anaconda redis mongodb mongo-tools
 pip install jupyter jupyterlab redis pymongo 
 
 redis-server  # maybe redis-server --port 7777
