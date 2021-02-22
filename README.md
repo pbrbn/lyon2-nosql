@@ -48,6 +48,13 @@ mongod --dbpath /tmp/mongodb  # don't forget to create folder in advance, in C:/
 jupyter lab
 ```
 
+Installing Orientdb is a bit more manual. Also you'll need to have a correctly configured Java 8+ through the `JAVA_HOME` environment variable.
+
+1. Head to the [downloads page](https://orientdb.org/download)
+2. Download the latest release for your OS. It should come as a zip archive. Unzip it.
+3. Open a new terminal, go to the unzipped Orientdb folder, run the server with `bin/server.bat`.
+4. Go to `http://localhost:2480` in your web browser to confirm all works!
+
 ## NoSQL stores debug
 
 #### Redis
