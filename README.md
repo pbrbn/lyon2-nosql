@@ -49,11 +49,12 @@ jupyter lab
 ```
 
 Installing Orientdb is a bit more manual. Also you'll need to have a correctly configured Java 8+ through the `JAVA_HOME` environment variable.
+- Don't download the latest OrientDB version, as pyorient isn't fully working with the latest version. Stick with OrientDB 2.2.x.
 
-1. Head to the [downloads page](https://orientdb.org/download)
-2. Download the latest release for your OS. It should come as a zip archive. Unzip it.
-3. Open a new terminal, go to the unzipped Orientdb folder, run the server with `bin/server.bat`.
-4. Go to `http://localhost:2480` in your web browser to confirm all works!
+1. Download the archive from [here](https://s3.us-east-2.amazonaws.com/orientdb3/releases/2.2.36/orientdb-community-2.2.36.zip). Unzip it on your drive.
+2. Open a new terminal, go to the unzipped Orientdb folder, run the server with `bin/server.bat`.
+3. Go to `http://localhost:2480` in your web browser to confirm all works!
+4. In your conda environment, install `pyorient` with `pip install pyorient`.
 
 ## NoSQL stores debug
 
