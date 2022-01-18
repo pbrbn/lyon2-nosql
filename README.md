@@ -34,6 +34,8 @@ jupyter lab --ip='0.0.0.0' --port=8888 --NotebookApp.token=''
 
 then hit `http://localhost:8888/lab` in a browser to access `Jupyterlab`.
 
+PS: if you try to use the command line directly or ssh, the credentials are `vagrant/vagrant`
+
 ### With conda
 
 ```
