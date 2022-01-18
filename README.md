@@ -40,18 +40,25 @@ conda activate nosql
 conda install -c anaconda redis mongodb mongo-tools
 pip install jupyter jupyterlab redis pymongo 
 
+# Start Redis
 redis-server  # maybe redis-server --port 7777
-# OR
-mongod --dbpath /tmp/mongodb  # don't forget to create folder in advance, in C:/tmp/mongodb on Windows
 
-# in another shell
+# Start Mongodb
+# don't forget to create folder in advance, in C:/tmp/mongodb on Windows
+mongod --dbpath /tmp/mongodb  
+
+# In another shell
+conda activate nosql
 jupyter lab
 ```
 
-Installing Orientdb is a bit more manual. Also you'll need to have a correctly configured Java 8+ through the `JAVA_HOME` environment variable.
+Installing Orientdb is a bit more manual. 
+
+Notes: 
+- You'll need to have a correctly configured Java 8+ through the `JAVA_HOME` environment variable, or run `conda install openjdk=8` (The `JAVA_HOME` variable should be automatically updated for this environment only).
 - Don't download the latest OrientDB version, as pyorient isn't fully working with the latest version. Stick with OrientDB 2.2.x.
 
-1. Download the archive from [here](https://s3.us-east-2.amazonaws.com/orientdb3/releases/2.2.36/orientdb-community-2.2.36.zip). Unzip it on your drive.
+1. Download the archive from [here](https://s3.us-east-2.amazonaws.com/orientdb3/releases/2.2.36/orientdb-community-2.2.36.zip). You will also find it in the `install` folder of this project. Unzip it on your drive.
 2. Open a new terminal, go to the unzipped Orientdb folder, run the server with `cd bin/ ` then `server.bat` on Windows, or `./bin/server.sh` on Mac/Linux.
 3. Go to `http://localhost:2480` in your web browser to confirm all works!
 4. In your conda environment, install `pyorient` with `pip install pyorient`.
