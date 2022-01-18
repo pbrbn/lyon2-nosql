@@ -26,7 +26,9 @@ To destroy : `vagrant destroy`
 Launch Jupyter inside the generated VM :
 
 ```
+vagrant ssh
 conda activate nosql
+pip install redis pymongo pyorient
 jupyter lab --ip='0.0.0.0' --port=8888 --NotebookApp.token=''
 ```
 

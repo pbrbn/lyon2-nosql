@@ -2,6 +2,7 @@
 set -e
 
 # Sometimes Windows just destroys end of lines
+apt-get update -y
 apt-get install -y dos2unix
 dos2unix /vagrant/install/install-*
 
