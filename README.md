@@ -5,48 +5,44 @@ Contains instructions to install and use `redis`, `mongo` and `OrientDB`, and us
 ## Prerequisites
 
 - Anaconda
-
-## Setup Install
-
-Remember to use the `Anaconda Powershell` prompt.
+- Docker Desktop (make sure to reinstall Docker Desktop so the `docker` command line works)
 
 ### Setup the conda environment
 
+Remember to use the `Anaconda Powershell` prompt at the root of your project.
 
 ```
 conda create -n nosql python=3.7
 conda activate nosql
-conda install -c anaconda redis mongodb mongo-tools
+conda install -c anaconda mongo-tools
 pip install jupyter jupyterlab redis pymongo
 ```
 
+To run your jupyter notebook: `jupyter notebook` or `jupyter lab`
+
 ### Run Redis
 
+In a separate command line prompt:
+
 ```
-# Start Redis
-redis-server  # you may need to specify a port like redis-server --port 7777
+docker run -it --rm -n some-redis -p 6379:6379 redis
 ```
 
 ### Run MongoDB
 
-```
-# don't forget to create folder in advance, in C:/tmp/mongodb on Windows
-mongod --dbpath /tmp/mongodb  
+In a separate command line prompt:
 
-# In another shell
-conda activate nosql
-jupyter lab
+```
+docker run -it --rm -n some-mongo -p 27017:27017 mongo:4
 ```
 
 ### Run OrientDB
 
-- You'll need to have a correctly configured Java 8+ through the `JAVA_HOME` environment variable, or run `conda install openjdk=8` (The `JAVA_HOME` variable should be automatically updated for this environment only).
-- Don't download the latest OrientDB version, as pyorient isn't fully working with the latest version. Stick with OrientDB 2.2.x inside the `exe` folder.
+In a separate command line prompt:
 
-1. Download the archive from [here](https://s3.us-east-2.amazonaws.com/orientdb3/releases/2.2.36/orientdb-community-2.2.36.zip). You will also find it in the `exe` folder of this project. Unzip it on your drive.
-2. Open a new terminal, go to the unzipped Orientdb folder, run the server with `cd bin/ ` then `server.bat` on Windows, or `./bin/server.sh` on Mac/Linux.
-3. Go to `http://localhost:2480` in your web browser to confirm all works!
-4. In your conda environment, install `pyorient` with `pip install pyorient`.
+```
+docker run -it --rm -n some-orientdb -p 2424:2424 -p 2480:2480 -e ORIENTDB_ROOT_PASSWORD=root orientdb:2.2
+```
 
 ## Contributions
 
